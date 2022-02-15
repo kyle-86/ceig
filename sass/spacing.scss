@@ -1,0 +1,39 @@
+// Default
+	$each-grid-coloumn: 3.75rem;
+
+	$space-xs: 1rem; // 16
+	$space-s: 4rem; // 64
+	$space-m: 5.63rem; // 90
+	$space-l: 6.88rem; // 110
+// Phone
+	$space-xs-phone: 1rem;
+	$space-s-phone: 20px;
+	$space-m-phone: 32px;
+	$space-l-phone: 60px;
+// Spacer item
+	.spacer--xs {
+		height: $space-xs;
+	}
+	.spacer--s {
+		height: $space-s;
+	}
+	.spacer--m {
+		height: $space-m;
+	}
+	.spacer--l {
+		height: $space-l;
+	}
+	@include phone {
+		.spacer--xs {
+			height: $space-xs-phone;
+		}
+		.spacer--s {
+			height: $space-s-phone;
+		}
+		.spacer--m {
+			height: $space-m-phone;
+		}
+		.spacer--l {
+			height: $space-l-phone;
+		}
+	}

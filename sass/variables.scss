@@ -1,0 +1,46 @@
+// Colors
+	// UI Colours
+		$color-default: #221F1F;
+		$color-dark   : #111;
+		$color-light  : #ccc;
+	// Semantic Colours
+		$color-error: #df0000;
+		$color-white: #ffffff;
+	// Layout Colours
+		$color-primary  : #73BF45;
+		$color-secondary: #046307;
+		$color-slate: #454547;
+		$color-dark-grey: #221F1F;
+		$color-dark-green: #003333;
+		$color-bright-green: #73BF45;
+		$color-bright-blue: #45BDE8;
+		$color-gold: #FCBD0F;
+// Fonts
+	$font-body   : 'proxima-nova', sans-serif;
+	$font-heading: 'neue-haas-grotesk-display', sans-serif;
+	$font-icon   : 'Font Awesome 5 Pro';
+// Animations
+	$transition     : all .24s ease-in-out;
+	$transition-fast: all .12s ease-in-out;
+	$transition-slow: all .48s ease-in-out;
+// Variable Classes
+	$classes: (
+		primary  : $color-primary,
+		secondary: $color-secondary,
+		dark     : $color-dark,
+		light    : $color-light,
+		error    : $color-error,
+		default  : $color-default,
+		white    : $color-white
+	);
+	@each $class-color, $class in $classes {
+		.bg--#{$class-color} {
+			background-color: $class;
+		}
+		.color--#{$class-color} {
+			color: $class;
+		}
+		.border--#{$class-color} {
+			border-color: $class;
+		}
+	}

@@ -1,0 +1,139 @@
+// Spinner
+.spinner {
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+	border-color: #003333 transparent #73BF45 transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+	position: absolute;
+	opacity: 1;
+	top: 50%;
+	left: 50%;
+	margin-top: -32px;
+	margin-left: -32px;
+}
+
+
+
+.spinner--dark {
+	border-left: 2px solid rgba(0, 0, 0, .15);
+	border-right: 2px solid rgba(0, 0, 0, .15);
+	border-bottom: 2px solid rgba(0, 0, 0, .15);
+	border-top: 2px solid rgba(0, 0, 0, .8);
+}
+
+.spinner--medium {
+	width: 48px;
+	height: 48px;
+	margin-top: -24px;
+	margin-left: -24px;
+}
+
+.spinner--small {
+	width: 24px;
+	height: 24px;
+	margin-top: -12px;
+	margin-left: -12px;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@include phone {
+	.spinner {
+		width: 24px;
+		height: 24px;
+		margin-top: -12px;
+		margin-left: -12px;
+	}
+}
+
+// Custom Animation
+@keyframes bounceArrow {
+
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(10px);
+	}
+
+	60% {
+		transform: translateY(5px);
+	}
+}
+
+.bounce-arrow {
+	animation-name: bounceArrow;
+}
+
+@keyframes pulse {
+
+	0%,
+	100% {
+		animation-timing-function: ease-in;
+	}
+
+	50% {
+		transform: scale(1.25);
+	}
+}
+
+/*Hidden class for adding and removing*/
+
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.lds-overlay {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,.0);
+	z-index: 999;
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-dual-ring:after {
+	content: " ";
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #fff;
+	border-color: $color-dark-green transparent $color-bright-green transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
